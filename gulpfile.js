@@ -3,16 +3,16 @@ const sourceFolder = 'src';
 
 const path = {
     build: {
-        html: projectFolder + '/',
-        styles: projectFolder + '/styles/',
-        img: projectFolder + '/img/'
+        html: `${projectFolder}/`,
+        styles: `${projectFolder}/styles/`,
+        img: `${projectFolder}/img/`
     },
     source: {
-        html: sourceFolder + '/*.html',
-        styles: sourceFolder + '/styles/*.less',
-        img: sourceFolder + '/img/*'
+        html: `${sourceFolder}/*.html`,
+        styles: `${sourceFolder}/styles/*.less`,
+        img: `${sourceFolder}/img/*`
     },
-    clean: './' + projectFolder + '/'
+    clean: `./${projectFolder}/`
 };
 
 const gulp = require('gulp');
@@ -54,8 +54,10 @@ const build = gulp.series(
     )
 );
 
-exports.copyHTML = copyHTML;
-exports.copyImg = copyImg;
-exports.transformStyles = transformStyles;
-exports.build = build;
-exports.default = build;
+module.exports = {
+    default: build,
+    build,
+    copyHTML,
+    copyImg,
+    transformStyles,
+};
