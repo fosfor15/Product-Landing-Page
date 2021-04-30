@@ -16,14 +16,14 @@
         </a>
         <nav id="nav-bar">
             <ul>
-                <li class="nav-link">
-                    <a href="#fashion">A little bit of Fashion</a>
+                <li>
+                    <a class="nav-link" href="#fashion">A little bit of Fashion</a>
                 </li>
-                <li class="nav-link">
-                    <a href="#collections">Our collections</a>
+                <li>
+                    <a class="nav-link" href="#collections">Our collections</a>
                 </li>
-                <li class="nav-link">
-                    <a href="#learn-more">Learn more</a>
+                <li>
+                    <a class="nav-link" href="#learn-more">Learn more</a>
                 </li>
             </ul>
         </nav>
@@ -40,13 +40,15 @@
             </p>
         </section>
 
-        <section id="fashion">
-            <h2>
+        <section class="container" id="fashion">
+            <h2 class="header">
                 <a href="#fashion">A little bit of Fashion</a>
             </h2>
+            <p>And other stuff</p>
 
-            <div id="video">
+            <div id="video-container">
                 <iframe
+                    id="video"
                     width="720"
                     height="405"
                     src="https://www.youtube.com/embed/tzULg-bNKeU"
@@ -54,9 +56,10 @@
                 </iframe>
             </div>
         </section>
+        <hr>
 
-        <section id="collections">
-            <h2>
+        <section class="container" id="collections">
+            <h2 class="header">
                 <a href="#collections">Our collections</a>
             </h2>
             <p>And what will you pay for it?</p>
@@ -70,7 +73,7 @@
                     </p>
                     <h4>Price</h4>
                     <p class="price">$ 990 – $ 5 495 per item</p>
-                    <a href="#learn-more" class="action">Learn more</a>
+                    <a href="#learn-more" class="button action">Learn more</a>
                 </div>
             </div>
 
@@ -82,7 +85,7 @@
                     </p>
                     <h4>Price</h4>
                     <p class="price">$ 790 – $ 1 595 per item</p>
-                    <a href="#learn-more" class="action">Learn more</a>
+                    <a href="#learn-more" class="button action">Learn more</a>
                 </div>
                 <img src="img/demo-2.jpg" alt="Collection of 2020">
             </div>
@@ -97,18 +100,19 @@
                     <h4>Price</h4>
                     <p class="last-price"> -80% $ <span>990</span></p>
                     <p class="price">$ 195 per item</p>
-                    <a href="#learn-more" class="action">Learn more</a>
+                    <a href="#learn-more" class="button action">Learn more</a>
                 </div>
             </div>
         </section>
+        <hr>
 
-        <section id="learn-more">
-            <h2>
+        <section class="container" id="learn-more">
+            <h2 class="header">
                 <a href="#learn-more">Learn more</a>
             </h2>
             <p>And what will you do for it?</p>
             
-            <p class="instructions">
+            <p class="instruction">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus accusantium eos eaque, natus optio voluptate quas, modi voluptas, aspernatur corrupti rem fugiat provident ut nesciunt culpa! Nisi totam cum consequatur.
             </p>
 
@@ -125,6 +129,7 @@
                 >
                 <input
                     type="submit"
+                    class="button"
                     id="submit"
                     value="Got it!"
                 >
@@ -132,6 +137,13 @@
         </section>    
     </main>
 
-    <footer></footer>
+    <footer>
+        <p>
+            Dmitry Kostyuk Fosfor15, 2021 &copy;
+        </p>
+        <a href="https://github.com/fosfor15/Product-Landing-Page" target="_blank">
+            <img src="img/github-icon.png" alt="Link to GitHub Repo">
+        </a>
+    </footer>
 </body>
 </html>

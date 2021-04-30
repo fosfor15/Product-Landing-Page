@@ -14,6 +14,7 @@ html {
 }
 #header {
   position: fixed;
+  z-index: 10;
   display: flex;
   top: 0;
   width: 100%;
@@ -33,18 +34,15 @@ html {
   display: flex;
   list-style-type: none
 }
-#nav-bar a {
+#nav-bar .nav-link {
   display: block;
-  padding: 26px 30px;
+  padding: 28px 32px;
   text-decoration: none;
   color: #fff;
   transition: .2s
 }
-#nav-bar a:hover {
+#nav-bar .nav-link:hover {
   background-color: #232323
-}
-#main {
-  margin-top: 72px
 }
 #first-screen {
   display: flex;
@@ -53,8 +51,10 @@ html {
   align-items: center;
   width: 100%;
   height: 810px;
+  padding-top: 77px;
   background-image: url(../img/first-screen.jpg);
-  background-position: center
+  background-position: center;
+  background-clip: content-box
 }
 #first-screen #logo-container {
   display: flex;
@@ -85,70 +85,45 @@ html {
   letter-spacing: 1px;
   color: #fff
 }
-#fashion {
+.container {
   width: 1200px;
-  margin: -30px auto 0
+  margin: -50px auto 40px
 }
-#fashion h2 {
-  padding: 90px 0 10px
+.header {
+  padding: 110px 0 10px
 }
-#fashion h2 a {
-  color: #0f0f0f;
+.header a {
+  position: relative;
   font-size: 28px;
   font-weight: 700;
+  color: #0f0f0f;
   text-decoration: none
 }
-#fashion h2 a:hover {
+.header a:hover {
   text-decoration: underline
 }
-#fashion #video {
+.header a:hover::before {
+  opacity: 1;
+  text-decoration: none
+}
+.header a::before {
+  content: '#';
+  position: absolute;
+  left: -22px;
+  opacity: 0;
+  transition: .2s
+}
+hr {
+  width: 95%;
+  margin: 0 auto;
+  border-style: groove;
+  color: #292929
+}
+#video-container {
   width: min-content;
   margin: 30px auto 0
 }
-#collections {
-  width: 1200px;
-  margin: -30px auto 0
-}
-#collections h2 {
-  padding: 90px 0 10px
-}
-#collections h2 a {
-  color: #0f0f0f;
-  font-size: 28px;
-  font-weight: 700;
-  text-decoration: none
-}
-#collections h2 a:hover {
-  text-decoration: underline
-}
-#collections .collection {
-  display: flex;
-  margin: 30px 0
-}
-#collections .collection .info {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  padding: 20px 30px
-}
-#collections .collection .info h3 {
-  margin: 10px 0;
-  font-size: 24px
-}
-#collections .collection .info h4 {
-  margin: 16px 0 10px
-}
-#collections .collection .info .price {
-  font-weight: 700
-}
-#collections .collection .info .last-price span {
-  text-decoration: line-through;
-  font-style: italic
-}
-#collections .collection .info .action {
-  display: block;
-  margin: auto auto 0 0;
-  padding: 5px 12px;
+.button {
   border: 1px solid #5c5c5c;
   border-radius: 3px;
   color: #5c5c5c;
@@ -156,60 +131,81 @@ html {
   text-decoration: none;
   transition: border-color,color .2s
 }
-#collections .collection .info .action:hover {
+.button:hover {
   border-color: #0f0f0f;
   color: #0f0f0f
 }
-#learn-more {
-  width: 1200px;
-  margin: -30px auto 0
+.collection {
+  display: flex;
+  margin: 30px 0
 }
-#learn-more h2 {
-  padding: 90px 0 10px
+.collection .info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 0 30px 20px
 }
-#learn-more h2 a {
-  color: #0f0f0f;
-  font-size: 28px;
-  font-weight: 700;
-  text-decoration: none
+.collection .info h3 {
+  margin: 15px 0;
+  font-size: 24px
 }
-#learn-more h2 a:hover {
-  text-decoration: underline
+.collection .info h4 {
+  margin: 16px 0 10px
 }
-#learn-more .instructions {
+.collection .info .price {
+  font-weight: 700
+}
+.collection .info .last-price span {
+  text-decoration: line-through;
+  font-style: italic
+}
+.collection .info .action {
+  display: block;
+  margin: auto auto 0 0;
+  padding: 5px 12px
+}
+.instruction {
   width: 80%;
-  margin: 30px auto;
+  margin: 30px auto 40px;
   text-align: center
 }
-#learn-more #form {
+#form {
   width: fit-content;
   margin: 0 auto
 }
-#learn-more #form input {
+#form input {
   display: block;
   margin: 15px auto
 }
-#learn-more #form #email {
+#form #email {
   padding: 5px
 }
-#learn-more #form #submit {
-  border: 1px solid #5c5c5c;
-  border-radius: 3px;
-  color: #5c5c5c;
-  font-size: 20px;
-  text-decoration: none;
-  transition: border-color,color .2s;
+#form #submit {
   padding: 4px 14px;
   cursor: pointer;
   background-color: transparent
 }
-#learn-more #form #submit:hover {
-  border-color: #0f0f0f;
-  color: #0f0f0f
-}
 footer {
+  display: flex;
   height: 200px;
-  margin-top: 50px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
   background-color: #1c1c1c;
   box-shadow: 0 0 14px -4px #0f0f0f
+}
+footer p {
+  margin-bottom: 20px;
+  color: #fff
+}
+footer a {
+  padding: 3px;
+  margin-bottom: 24px
+}
+footer a img {
+  filter: brightness(1);
+  transition: .2s
+}
+footer a:hover img {
+  filter: brightness(.85)
 }
