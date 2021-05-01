@@ -87,10 +87,31 @@ html {
 }
 .container {
   width: 1200px;
-  margin: -50px auto 40px
+  margin: -70px auto 40px
+}
+@media screen and (max-width:1220px) {
+  .container {
+    width: 1000px
+  }
+}
+@media screen and (max-width:1020px) {
+  .container {
+    width: 800px
+  }
+}
+@media screen and (max-width:820px) {
+  .container {
+    width: 400px
+  }
 }
 .header {
   padding: 110px 0 10px
+}
+@media screen and (max-width:820px) {
+  .header,
+  .header + p {
+    text-align: center
+  }
 }
 .header a {
   position: relative;
@@ -119,9 +140,17 @@ hr {
   border-style: groove;
   color: #292929
 }
-#video-container {
-  width: min-content;
-  margin: 30px auto 0
+#video {
+  display: block;
+  margin: 30px auto 0;
+  width: 720px;
+  height: 405px
+}
+@media screen and (max-width:820px) {
+  #video {
+    width: 400px;
+    height: 225px
+  }
 }
 .button {
   border: 1px solid #5c5c5c;
@@ -139,6 +168,19 @@ hr {
   display: flex;
   margin: 30px 0
 }
+@media screen and (min-width:821px) {
+  .collection {
+    flex-direction: row
+  }
+  .collection:nth-of-type(odd) {
+    flex-direction: row-reverse
+  }
+}
+@media screen and (max-width:820px) {
+  .collection {
+    flex-direction: column
+  }
+}
 .collection .info {
   display: flex;
   flex-direction: column;
@@ -149,14 +191,27 @@ hr {
   margin: 15px 0;
   font-size: 24px
 }
+@media screen and (max-width:820px) {
+  .collection .info h3 {
+    text-align: center
+  }
+}
 .collection .info h4 {
   margin: 16px 0 10px
 }
+@media screen and (max-width:820px) {
+  .collection .info h4 {
+    margin-bottom: 0
+  }
+}
 .collection .info .price {
+  margin: 10px 0;
   font-weight: 700
 }
-.collection .info .last-price span {
-  text-decoration: line-through;
+.collection .info .price sup {
+  padding: 2px;
+  color: #5c5c5c;
+  font-size: smaller;
   font-style: italic
 }
 .collection .info .action {
