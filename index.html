@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/styles/style.css">
+    <script>// Fix pretransition effects</script>
+    <title>Product Landing Page</title>
+</head>
+
+<body>
+    <header id="header">
+        <a href="#first-screen">
+            <img src="dist/img/logo-1.png" alt="Company logo" id="header-img">
+        </a>
+        <nav id="nav-bar">
+            <ul>
+                <li>
+                    <a class="nav-link" href="#fashion">A little bit of Fashion</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#collections">Our collections</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="#learn-more">Learn more</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section id="first-screen">
+            <div id="logo-container">
+                <img src="dist/img/logo-2.png" alt="Company logo">
+                <p>some city</p>
+            </div>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores voluptate molestiae repellat, ipsam modi iste delectus enim hic. Provident, enim magnam possimus saepe temporibus at expedita id! At, amet quaerat.
+            </p>
+        </section>
+
+        <section class="container" id="fashion">
+            <h2 class="header">
+                <a href="#fashion">A little bit of Fashion</a>
+            </h2>
+            <p>And other stuff</p>
+
+            <iframe
+                id="video"
+                src="https://www.youtube.com/embed/tzULg-bNKeU"
+            >
+            </iframe>
+        </section>
+        <hr>
+
+        <section class="container" id="collections">
+            <h2 class="header">
+                <a href="#collections">Our collections</a>
+            </h2>
+            <p>And what will you pay for it?</p>
+
+            <div class="collection">
+                <img src="dist/img/demo-1.jpg" alt="Collection of 2021">
+                <div class="info">
+                    <h3>Collection of 2021</h3>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil saepe ratione laudantium at laborum, pariatur reprehenderit aperiam soluta officiis, ipsam, eaque nemo corrupti suscipit dolor quis ut! Omnis, necessitatibus cumque!
+                    </p>
+                    <h4>Price</h4>
+                    <p class="price">$ 990 – $ 5 495 per item</p>
+                    <a href="#learn-more" class="button action">Learn more</a>
+                </div>
+            </div>
+
+            <div class="collection">
+                <img src="dist/img/demo-2.jpg" alt="Collection of 2020">
+                <div class="info">
+                    <h3>Collection of 2020</h3>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil saepe ratione laudantium at laborum, pariatur reprehenderit aperiam soluta officiis, ipsam, eaque nemo corrupti suscipit dolor quis ut! Omnis, necessitatibus cumque!
+                    </p>
+                    <h4>Price</h4>
+                    <p class="price">$ 790 – $ 1 595 per item</p>
+                    <a href="#learn-more" class="button action">Learn more</a>
+                </div>
+            </div>
+
+            <div class="collection">
+                <img src="dist/img/demo-3.jpg" alt="Discount collection">
+                <div class="info">
+                    <h3>Discount collection</h3>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil saepe ratione laudantium at laborum, pariatur reprehenderit aperiam soluta officiis, ipsam, eaque nemo corrupti suscipit dolor quis ut! Omnis, necessitatibus cumque!
+                    </p>
+                    <h4>Price</h4>
+                    <p class="price"><del>$ 990</del><sup>-80%</sup> – $ 195 per item</p>
+                    <a href="#learn-more" class="button action">Learn more</a>
+                </div>
+            </div>
+        </section>
+        <hr>
+
+        <section class="container" id="learn-more">
+            <h2 class="header">
+                <a href="#learn-more">Learn more</a>
+            </h2>
+            <p>And what will you do for it?</p>
+            
+            <p id="instruction">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus accusantium eos eaque, natus optio voluptate quas, modi voluptas, aspernatur corrupti rem fugiat provident ut nesciunt culpa! Nisi totam cum consequatur.
+            </p>
+
+            <form action="https://www.freecodecamp.com/email-submit" id="form">
+                <h3>Leave your email and we will sell you the true stylish look</h3>
+                <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Type email here"
+                    pattern="[-.\w]+@([\w-]+\.)+\w+"
+                    size="30"
+                    required
+                >
+                <input
+                    type="submit"
+                    class="button"
+                    id="submit"
+                    value="Got it!"
+                >
+            </form>
+        </section>    
+    </main>
+
+    <footer>
+        <p>
+            Dmitry Kostyuk Fosfor15, 2021 &copy;
+        </p>
+        <a href="https://github.com/fosfor15/Product-Landing-Page" target="_blank">
+            <img src="dist/img/github-icon.png" alt="Link to GitHub Repo">
+        </a>
+    </footer>
+</body>
+</html>
