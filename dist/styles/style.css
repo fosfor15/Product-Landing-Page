@@ -12,6 +12,73 @@
 html {
   scroll-behavior: smooth
 }
+.container {
+  width: 1200px;
+  margin: -70px auto 40px
+}
+@media screen and (max-width:1220px) {
+  .container {
+    width: 1000px
+  }
+}
+@media screen and (max-width:1020px) {
+  .container {
+    width: 800px
+  }
+}
+@media screen and (max-width:820px) {
+  .container {
+    width: 400px
+  }
+}
+.header {
+  padding: 110px 0 10px
+}
+@media screen and (max-width:820px) {
+  .header,
+  .header + p {
+    text-align: center
+  }
+}
+.header a {
+  position: relative;
+  font-size: 28px;
+  font-weight: 700;
+  color: #0f0f0f;
+  text-decoration: none
+}
+.header a:hover {
+  text-decoration: underline
+}
+.header a:hover::before {
+  opacity: 1;
+  text-decoration: none
+}
+.header a::before {
+  content: '#';
+  position: absolute;
+  left: -22px;
+  opacity: 0;
+  transition: .2s
+}
+hr {
+  width: 95%;
+  margin: 0 auto;
+  border-style: groove;
+  color: #292929
+}
+.button {
+  border: 1px solid #5c5c5c;
+  border-radius: 3px;
+  color: #5c5c5c;
+  font-size: 20px;
+  text-decoration: none;
+  transition: border-color,color .2s
+}
+.button:hover {
+  border-color: #0f0f0f;
+  color: #0f0f0f
+}
 #header {
   position: fixed;
   z-index: 10;
@@ -85,61 +152,6 @@ html {
   letter-spacing: 1px;
   color: #fff
 }
-.container {
-  width: 1200px;
-  margin: -70px auto 40px
-}
-@media screen and (max-width:1220px) {
-  .container {
-    width: 1000px
-  }
-}
-@media screen and (max-width:1020px) {
-  .container {
-    width: 800px
-  }
-}
-@media screen and (max-width:820px) {
-  .container {
-    width: 400px
-  }
-}
-.header {
-  padding: 110px 0 10px
-}
-@media screen and (max-width:820px) {
-  .header,
-  .header + p {
-    text-align: center
-  }
-}
-.header a {
-  position: relative;
-  font-size: 28px;
-  font-weight: 700;
-  color: #0f0f0f;
-  text-decoration: none
-}
-.header a:hover {
-  text-decoration: underline
-}
-.header a:hover::before {
-  opacity: 1;
-  text-decoration: none
-}
-.header a::before {
-  content: '#';
-  position: absolute;
-  left: -22px;
-  opacity: 0;
-  transition: .2s
-}
-hr {
-  width: 95%;
-  margin: 0 auto;
-  border-style: groove;
-  color: #292929
-}
 #video {
   display: block;
   margin: 30px auto 0;
@@ -151,18 +163,6 @@ hr {
     width: 400px;
     height: 225px
   }
-}
-.button {
-  border: 1px solid #5c5c5c;
-  border-radius: 3px;
-  color: #5c5c5c;
-  font-size: 20px;
-  text-decoration: none;
-  transition: border-color,color .2s
-}
-.button:hover {
-  border-color: #0f0f0f;
-  color: #0f0f0f
 }
 .collection {
   display: flex;
@@ -219,7 +219,7 @@ hr {
   margin: auto auto 0 0;
   padding: 5px 12px
 }
-.instruction {
+#instruction {
   width: 80%;
   margin: 30px auto 40px;
   text-align: center
@@ -230,7 +230,7 @@ hr {
 }
 #form input {
   display: block;
-  margin: 15px auto
+  margin: 20px auto
 }
 #form #email {
   padding: 5px
